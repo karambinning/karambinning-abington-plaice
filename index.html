@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Abington Plaice — Fish &amp; Chips, Landcross Drive, Northampton</title>
+<meta name="description" content="Abington Plaice — a chip shop on Landcross Drive, Abington Vale, Northampton. Fish, chips, pies, peas, the lot. NN3 3LN." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#F2EBDB;
+  --paper-2:#EAE0C9;
+  --ink:#13110E;
+  --ink-2:#2A241B;
+  --teal:#1F3A36;
+  --gold:#D4A24C;
+  --red:#B6342A;
+  --rule:rgba(19,17,14,.55);
+  --display:"Playfair Display","Source Serif 4",Georgia,serif;
+  --body:"Source Serif 4",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:clamp(1rem,.55rem + .9vw,1.15rem);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-wrap:pretty;
+  hyphens:auto;
+  position:relative;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg,rgba(19,17,14,.025) 0 1px,transparent 1px 3px),
+    radial-gradient(circle at 20% 10%,rgba(19,17,14,.04),transparent 60%),
+    radial-gradient(circle at 80% 90%,rgba(31,58,54,.05),transparent 60%);
+  z-index:1;
+  mix-blend-mode:multiply;
+}
+main,header,footer,section{position:relative;z-index:2}
+h1,h2,h3{font-family:var(--display);font-weight:900;letter-spacing:-.02em;line-height:.92;text-wrap:balance}
+a{color:inherit}
+
+/* ------ TOP BAR ------ */
+.topbar{
+  border-bottom:1px solid var(--rule);
+  padding:14px clamp(20px,4vw,56px);
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:24px;flex-wrap:wrap;
+  font-family:var(--body);
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+}
+.topbar small{display:block;font-size:.7rem;opacity:.7;letter-spacing:.22em;margin-bottom:2px}
+.topbar .vol{font-style:italic;text-transform:none;letter-spacing:.01em;font-family:var(--display);font-weight:400;font-size:.95rem}
+.topbar nav{display:flex;gap:22px}
+.topbar nav a{text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .2s,color .2s}
+.topbar nav a:hover{border-color:var(--ink)}
+
+/* ------ MASTHEAD ------ */
+.masthead{
+  padding:clamp(36px,7vw,90px) clamp(20px,4vw,56px) clamp(24px,5vw,60px);
+  border-bottom:3px double var(--ink);
+  text-align:center;
+}
+.masthead .pre{
+  font-family:var(--body);
+  text-transform:uppercase;
+  letter-spacing:.45em;
+  font-size:.72rem;
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  margin-bottom:18px;
+  opacity:.85;
+}
+.masthead .pre span{display:inline-block;width:42px;height:1px;background:var(--ink);opacity:.5}
+.masthead h1{
+  font-size:clamp(3.6rem,15vw,12.5rem);
+  letter-spacing:-.035em;
+}
+.masthead h1 .amp{font-style:italic;font-weight:400;color:var(--red);padding:0 .04em}
+.masthead .sub{
+  margin-top:18px;
+  display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;
+  font-family:var(--body);
+  font-size:.92rem;
+  letter-spacing:.04em;
+}
+.masthead .sub b{font-weight:600}
+.masthead .sub .dot{width:5px;height:5px;background:var(--ink);border-radius:50%;display:inline-block}
+
+/* ------ MARQUEE ------ */
+.marquee{
+  background:var(--ink);
+  color:var(--paper);
+  overflow:hidden;
+  border-bottom:1px solid var(--ink);
+  padding:14px 0;
+}
+.marquee__track{
+  display:inline-flex;gap:48px;white-space:nowrap;
+  animation:scroll 34s linear infinite;
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(1.4rem,2.6vw,2rem);
+  letter-spacing:-.005em;
+}
+.marquee__track span{display:inline-flex;align-items:center;gap:48px}
+.marquee__track i{font-style:italic;color:var(--gold);font-weight:400}
+.marquee__track em{font-style:normal;color:var(--gold);opacity:.55;font-size:1.4em;line-height:0;transform:translateY(.05em);display:inline-block}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ------ LEDE ------ */
+.lede{
+  padding:clamp(50px,8vw,110px) clamp(20px,4vw,56px);
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(36px,6vw,72px);
+  max-width:1320px;margin:0 auto;
+}
+@media (min-width:880px){
+  .lede{grid-template-columns:1.1fr .9fr;align-items:start}
+}
+.lede .deck{
+  font-family:var(--display);
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(1.6rem,2.4vw,2.2rem);
+  line-height:1.25;
+  letter-spacing:-.005em;
+  color:var(--ink-2);
+  border-left:3px solid var(--red);
+  padding-left:clamp(18px,2.4vw,28px);
+}
+.lede .deck b{font-style:normal;font-weight:900;color:var(--ink)}
+.lede .copy{column-count:1;font-size:1.08rem}
+@media (min-width:560px){.lede .copy{column-count:2;column-gap:32px}}
+.lede .copy p{margin-bottom:14px;break-inside:avoid}
+.lede .copy p:first-of-type::first-letter{
+  font-family:var(--display);
+  font-weight:900;
+  float:left;
+  font-size:5.2rem;
+  line-height:.82;
+  padding:6px 12px 0 0;
+  color:var(--teal);
+}
+
+/* ------ COLUMNS ROW ------ */
+.cols{
+  background:var(--paper-2);
+  border-block:1px solid var(--rule);
+  padding:clamp(40px,6vw,72px) clamp(20px,4vw,56px);
+}
+.cols__wrap{
+  max-width:1320px;margin:0 auto;
+  display:grid;gap:clamp(28px,4vw,48px);
+  grid-template-columns:1fr;
+}
+@media (min-width:780px){.cols__wrap{grid-template-columns:repeat(3,1fr)}}
+.col h3{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:1.05rem;
+  text-transform:uppercase;
+  letter-spacing:.32em;
+  margin-bottom:16px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--rule);
+}
+.col p{font-size:1rem;line-height:1.55}
+.col .key{
+  font-family:var(--display);
+  font-weight:900;
+  font-size:clamp(2.2rem,4vw,3.4rem);
+  line-height:1;
+  display:block;
+  margin-bottom:8px;
+  letter-spacing:-.02em;
+}
+.col .key.gold{color:var(--gold)}
+.col .key.teal{color:var(--teal)}
+.col .key.red{color:var(--red)}
+
+/* ------ MENU (BROADSHEET) ------ */
+.menu{
+  padding:clamp(60px,9vw,120px) clamp(20px,4vw,56px);
+}
+.menu__hd{
+  max-width:1320px;margin:0 auto clamp(40px,5vw,64px);
+  text-align:center;
+}
+.menu__hd .kicker{
+  font-family:var(--body);font-size:.75rem;text-transform:uppercase;letter-spacing:.4em;
+  margin-bottom:14px;opacity:.7
+}
+.menu__hd h2{font-size:clamp(2.6rem,7vw,5.4rem)}
+.menu__hd h2 .it{font-style:italic;font-weight:400;color:var(--teal)}
+.menu__wrap{
+  max-width:1240px;margin:0 auto;
+  display:grid;gap:clamp(32px,4vw,56px);
+  grid-template-columns:1fr;
+}
+@media (min-width:780px){.menu__wrap{grid-template-columns:1fr 1fr}}
+.menu__sect h3{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(1.5rem,2.2vw,1.85rem);
+  border-bottom:2px solid var(--ink);
+  padding-bottom:10px;margin-bottom:18px;
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.menu__sect h3 small{font-family:var(--body);font-weight:400;font-size:.7rem;text-transform:uppercase;letter-spacing:.32em;opacity:.7}
+.menu__sect ul{list-style:none}
+.menu__sect li{
+  padding:11px 0;
+  border-bottom:1px dotted var(--rule);
+  display:grid;grid-template-columns:1fr auto;gap:14px;align-items:baseline;
+  font-size:1.05rem;
+}
+.menu__sect li strong{font-weight:700;font-family:var(--display);font-size:1.15rem}
+.menu__sect li em{font-style:italic;color:var(--ink-2);font-size:.9rem;opacity:.85;display:block;margin-top:2px}
+.menu__sect li .note{font-family:var(--body);font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;color:var(--red);font-weight:600;opacity:.85}
+
+.menu__foot{
+  max-width:1240px;margin:clamp(40px,6vw,72px) auto 0;
+  text-align:center;
+  font-family:var(--display);font-style:italic;font-size:1.1rem;
+  color:var(--ink-2);
+  padding-top:24px;border-top:1px solid var(--rule);
+}
+
+/* ------ HOUSE NOTES (alternating slab) ------ */
+.house{
+  background:var(--teal);
+  color:var(--paper);
+  padding:clamp(60px,9vw,120px) clamp(20px,4vw,56px);
+}
+.house__wrap{
+  max-width:1240px;margin:0 auto;
+  display:grid;gap:clamp(32px,5vw,64px);
+  grid-template-columns:1fr;
+}
+@media (min-width:880px){.house__wrap{grid-template-columns:.85fr 1.15fr;align-items:start}}
+.house h2{
+  font-size:clamp(2.4rem,6vw,4.6rem);
+  color:var(--paper);
+}
+.house h2 .gold{color:var(--gold);font-style:italic;font-weight:400}
+.house .lead{
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-size:clamp(1.25rem,1.9vw,1.55rem);
+  line-height:1.4;
+  color:rgba(242,235,219,.85);
+  margin-top:18px;
+}
+.house ul{list-style:none;display:grid;gap:18px}
+.house li{
+  padding-left:22px;
+  position:relative;
+  font-size:1.05rem;
+  line-height:1.55;
+  border-bottom:1px solid rgba(242,235,219,.18);
+  padding-bottom:18px;
+}
+.house li::before{
+  content:"§";
+  position:absolute;left:0;top:1px;
+  color:var(--gold);font-family:var(--display);font-weight:700;font-size:1.1rem;
+}
+.house li:last-child{border-bottom:0}
+.house li b{color:var(--gold);font-weight:700;font-family:var(--display);font-size:1.15rem;display:block;margin-bottom:4px;letter-spacing:.02em}
+
+/* ------ FIND US ------ */
+.find{
+  padding:clamp(60px,9vw,120px) clamp(20px,4vw,56px);
+  border-block:1px solid var(--rule);
+}
+.find__wrap{
+  max-width:1240px;margin:0 auto;
+  display:grid;gap:clamp(32px,5vw,60px);
+  grid-template-columns:1fr;
+}
+@media (min-width:780px){.find__wrap{grid-template-columns:.9fr 1.1fr;align-items:center}}
+.find h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+.find h2 .red{color:var(--red);font-style:italic;font-weight:400}
+.find .addr{
+  font-family:var(--display);
+  font-size:clamp(1.4rem,2.4vw,2rem);
+  font-weight:700;line-height:1.25;margin-top:22px;
+}
+.find .addr small{
+  display:block;font-family:var(--body);font-weight:400;font-size:.78rem;
+  text-transform:uppercase;letter-spacing:.32em;margin-bottom:6px;opacity:.7
+}
+.find .post{
+  display:inline-block;margin-top:18px;
+  padding:10px 18px;border:2px solid var(--ink);
+  font-family:var(--display);font-weight:900;font-size:1.4rem;letter-spacing:.05em;
+}
+.find .cta{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:24px;
+  background:var(--ink);color:var(--paper);
+  text-decoration:none;
+  padding:18px 26px;
+  font-family:var(--body);font-weight:600;
+  text-transform:uppercase;letter-spacing:.24em;font-size:.82rem;
+  transition:background .2s,transform .2s;
+}
+.find .cta:hover{background:var(--red);transform:translate(-2px,-2px)}
+.find .cta::after{content:"→";font-size:1.1rem;transition:transform .2s}
+.find .cta:hover::after{transform:translateX(4px)}
+
+.findcard{
+  background:var(--paper-2);
+  border:1px solid var(--rule);
+  padding:clamp(28px,4vw,40px);
+  position:relative;
+}
+.findcard::before{
+  content:"NN3 3LN";
+  position:absolute;top:-14px;left:24px;
+  background:var(--paper);
+  padding:2px 14px;
+  font-family:var(--display);font-weight:900;letter-spacing:.04em;
+  border:1px solid var(--ink);
+  font-size:.82rem;
+}
+.findcard h3{
+  font-family:var(--display);font-weight:700;font-size:1.15rem;
+  text-transform:uppercase;letter-spacing:.32em;margin-bottom:16px;
+  padding-bottom:10px;border-bottom:1px solid var(--rule);
+}
+.findcard dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;font-size:.98rem}
+.findcard dt{font-family:var(--body);font-size:.72rem;text-transform:uppercase;letter-spacing:.28em;color:var(--ink-2);padding-top:5px}
+.findcard dd{font-family:var(--display);font-weight:700;font-size:1.1rem}
+.findcard dd em{font-style:italic;font-weight:400;color:var(--ink-2);font-size:.95rem;display:block;margin-top:2px}
+
+/* ------ COLOPHON / FOOTER LETTERHEAD ------ */
+footer{
+  background:var(--ink);
+  color:var(--paper);
+  padding:clamp(50px,7vw,90px) clamp(20px,4vw,56px) clamp(30px,4vw,50px);
+}
+.colophon{
+  max-width:1320px;margin:0 auto;
+  display:grid;gap:36px;
+  grid-template-columns:1fr;
+}
+@media (min-width:780px){.colophon{grid-template-columns:1.4fr 1fr 1fr}}
+.colophon h4{
+  font-family:var(--body);font-weight:600;font-size:.72rem;
+  text-transform:uppercase;letter-spacing:.4em;
+  color:var(--gold);
+  margin-bottom:18px;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(212,162,76,.3);
+}
+.colophon .letterhead{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(2.4rem,4.5vw,3.6rem);
+  line-height:.92;letter-spacing:-.025em;
+  margin-bottom:18px;
+}
+.colophon .letterhead i{font-style:italic;font-weight:400;color:var(--gold)}
+.colophon p{font-size:.98rem;line-height:1.55;color:rgba(242,235,219,.78)}
+.colophon p b{color:var(--paper);font-weight:600}
+.colophon a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(212,162,76,.4);transition:border-color .2s}
+.colophon a:hover{border-color:var(--gold)}
+.colophon ul{list-style:none;display:grid;gap:12px;font-size:.98rem;color:rgba(242,235,219,.78)}
+.colophon ul b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--paper);margin-bottom:2px;letter-spacing:.02em}
+
+.rule-strip{
+  max-width:1320px;margin:48px auto 0;
+  padding-top:24px;
+  border-top:1px solid rgba(242,235,219,.18);
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  font-family:var(--body);font-size:.74rem;
+  text-transform:uppercase;letter-spacing:.28em;
+  color:rgba(242,235,219,.55);
+}
+
+/* ------ REVEAL ------ */
+@supports (animation-timeline: view()) {
+  .reveal{
+    animation:rise both;
+    animation-timeline:view();
+    animation-range:entry 0% cover 25%;
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(2rem)}
+    to{opacity:1;transform:translateY(0)}
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div>
+    <small>Vol. XLIII · Northampton</small>
+    <span class="vol">The Abington Plaice</span>
+  </div>
+  <nav>
+    <a href="#paper">Today</a>
+    <a href="#menu">Menu</a>
+    <a href="#house">House</a>
+    <a href="#find">Find Us</a>
+  </nav>
+</header>
+
+<section class="masthead">
+  <div class="pre"><span></span>Established at No. 43 Landcross Drive<span></span></div>
+  <h1>Abington<br/><span class="amp">&amp;</span>Plaice</h1>
+  <div class="sub">
+    <b>Fish</b>
+    <span class="dot"></span>
+    <b>Chips</b>
+    <span class="dot"></span>
+    <b>Pies &amp; Peas</b>
+    <span class="dot"></span>
+    <b>Abington Vale, NN3</b>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Fresh haddock <em>·</em> <i>Hand-cut chips</i> <em>·</em> Mushy peas <em>·</em> Steak &amp; kidney <em>·</em> Battered sausage <em>·</em> Curry sauce <em>·</em> Pickled eggs <em>·</em> Wally on the side <em>·</em></span>
+    <span>Fresh haddock <em>·</em> <i>Hand-cut chips</i> <em>·</em> Mushy peas <em>·</em> Steak &amp; kidney <em>·</em> Battered sausage <em>·</em> Curry sauce <em>·</em> Pickled eggs <em>·</em> Wally on the side <em>·</em></span>
+  </div>
+</div>
+
+<section class="lede reveal" id="paper">
+  <div class="deck">
+    <b>A chip shop on Landcross Drive.</b> Frying for Abington Vale, Weston Favell, Lings, Lumbertubs and the half of Northampton that knows where the good stuff lives.
+  </div>
+  <div class="copy">
+    <p>The plaice on the door is no accident. We sat down at the bottom of Landcross Drive, lit the range, and called it Abington Plaice — half the postcode, half the fish, all of the joke. Twenty-odd years later and we're still here, still frying, still wrapping it the right way.</p>
+    <p>The fish comes in proper. The potatoes are cut here, not poured out of a bag. The batter goes on at the last minute so it goes out crisp. We are not a chain. We are not a concept. We are a chip shop, and on the right Friday evening that is everything you could possibly need.</p>
+    <p>If you've not had it for a while, you've forgotten how good it is. If you have it every week — you already know. Either way: come down, ask for what you fancy, and we'll do you a parcel that gets home hot.</p>
+  </div>
+</section>
+
+<section class="cols">
+  <div class="cols__wrap">
+    <div class="col reveal">
+      <h3>The fryer</h3>
+      <span class="key gold">No. 1</span>
+      <p>One range, run hot, scrubbed clean every closing time. Batter goes in fresh; nothing sits about waiting on a hot lamp. If it isn't right we'll do it again.</p>
+    </div>
+    <div class="col reveal">
+      <h3>The chips</h3>
+      <span class="key teal">No. 2</span>
+      <p>Whole potatoes, cut on the premises, double-fried the old way. Crisp outside, fluffy in. Salt and vinegar applied by the customer — never the chef.</p>
+    </div>
+    <div class="col reveal">
+      <h3>The room</h3>
+      <span class="key red">No. 3</span>
+      <p>Walk in. Order at the counter. Five minutes in the window watching the cars go up Landcross. Walk out with a hot parcel. That is the whole offer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="menu__hd">
+    <div class="kicker">— What's On The Board —</div>
+    <h2>From the range<br/><span class="it">&amp; the chipper</span></h2>
+  </div>
+
+  <div class="menu__wrap">
+    <div class="menu__sect reveal">
+      <h3>From the sea <small>Battered to order</small></h3>
+      <ul>
+        <li>
+          <div><strong>Haddock</strong><em>The house fish. Filleted, battered, fried fresh.</em></div>
+          <div class="note">Reg / Lg</div>
+        </li>
+        <li>
+          <div><strong>Cod</strong><em>Thick fillet, sweet, white, crisp jacket.</em></div>
+          <div class="note">Reg / Lg</div>
+        </li>
+        <li>
+          <div><strong>Plaice</strong><em>The namesake — when the supplier sends a good one.</em></div>
+          <div class="note">Ask</div>
+        </li>
+        <li>
+          <div><strong>Scampi</strong><em>Wholetail, breadcrumb, six or eight to the box.</em></div>
+          <div class="note">Box</div>
+        </li>
+        <li>
+          <div><strong>Fishcake</strong><em>Smoked or plain, the proper saucer shape.</em></div>
+          <div class="note">Single</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu__sect reveal">
+      <h3>From the chipper <small>Hand-cut, double-fried</small></h3>
+      <ul>
+        <li>
+          <div><strong>Chips</strong><em>Small bag, large bag, family — say the word.</em></div>
+          <div class="note">S / L / Fam</div>
+        </li>
+        <li>
+          <div><strong>Chips &amp; Cheese</strong><em>Hot chips, grated cheese, lid on, melt in the bag.</em></div>
+          <div class="note">Reg</div>
+        </li>
+        <li>
+          <div><strong>Chips &amp; Curry</strong><em>House curry sauce, ladled over, no skimping.</em></div>
+          <div class="note">Reg</div>
+        </li>
+        <li>
+          <div><strong>Mushy Peas</strong><em>Marrowfats, soaked overnight, simmered out.</em></div>
+          <div class="note">Pot</div>
+        </li>
+        <li>
+          <div><strong>Pickled Egg</strong><em>From the jar, the only acceptable garnish.</em></div>
+          <div class="note">Each</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu__sect reveal">
+      <h3>Pies &amp; sausages <small>Steaming hot cabinet</small></h3>
+      <ul>
+        <li>
+          <div><strong>Steak &amp; Kidney</strong><em>Short-crust, dark gravy, proper filling.</em></div>
+          <div class="note">Pie</div>
+        </li>
+        <li>
+          <div><strong>Chicken &amp; Mushroom</strong><em>Creamy filling, golden top, in pastry.</em></div>
+          <div class="note">Pie</div>
+        </li>
+        <li>
+          <div><strong>Meat &amp; Potato</strong><em>The honest one. Fork required.</em></div>
+          <div class="note">Pie</div>
+        </li>
+        <li>
+          <div><strong>Battered Sausage</strong><em>Saveloy red — or the plain pork, your call.</em></div>
+          <div class="note">Each</div>
+        </li>
+        <li>
+          <div><strong>Saveloy</strong><em>Hot pink, hot temperature, no apology.</em></div>
+          <div class="note">Each</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu__sect reveal">
+      <h3>Sides &amp; sauces <small>Bottled at the counter</small></h3>
+      <ul>
+        <li>
+          <div><strong>Curry sauce</strong><em>Pot or pour-over. The house version, mild.</em></div>
+          <div class="note">Pot</div>
+        </li>
+        <li>
+          <div><strong>Gravy</strong><em>Hot, brown, glossy — Northampton's preference.</em></div>
+          <div class="note">Pot</div>
+        </li>
+        <li>
+          <div><strong>Wally (pickled cucumber)</strong><em>Long, green, sour. You know.</em></div>
+          <div class="note">Each</div>
+        </li>
+        <li>
+          <div><strong>Bread &amp; butter</strong><em>For the chip butty, ask.</em></div>
+          <div class="note">Slice</div>
+        </li>
+        <li>
+          <div><strong>Cans &amp; bottles</strong><em>Cold drinks fridge — usual suspects.</em></div>
+          <div class="note">From fridge</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="menu__foot">Prices change with the catch, the spud crop and the kindness of suppliers. Ask at the counter on the night — we'll always tell you straight.</p>
+</section>
+
+<section class="house" id="house">
+  <div class="house__wrap">
+    <div>
+      <h2>House <span class="gold">notes</span></h2>
+      <p class="lead">The handful of things worth knowing before you order. Read it once and you're a regular.</p>
+    </div>
+    <ul class="reveal">
+      <li><b>Cash &amp; card both fine.</b> Contactless on the counter terminal. Cash kept in the float for the Friday rush.</li>
+      <li><b>Salt &amp; vinegar at the counter.</b> Asked, not assumed. House malt vinegar; non-brewed if you prefer, just say.</li>
+      <li><b>Allergies — please tell us.</b> Same oil for fish and chips, so we can't promise traces. We'll do our level best for any specific need.</li>
+      <li><b>Hot wrap, cold drive.</b> If you're going further than ten minutes, ask for the parcel double-wrapped. It travels better.</li>
+      <li><b>Kids' parcels.</b> Small fish, small chips, ketchup if you must. We don't mind — chip shop is for everyone.</li>
+      <li><b>Tonight's service.</b> Hours and any holiday closures go on our Facebook first. Quickest way to check before you set off.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="find__wrap">
+    <div class="reveal">
+      <h2>Find <span class="red">the shop</span></h2>
+      <div class="addr">
+        <small>The Address</small>
+        43 Landcross Drive,<br/>Abington Vale,<br/>Northampton.
+      </div>
+      <div class="post">NN3 3LN</div>
+      <div>
+        <a class="cta" href="https://www.facebook.com/ABINGTONPLAICE/" target="_blank" rel="noopener noreferrer">Tonight on Facebook</a>
+      </div>
+    </div>
+    <aside class="findcard reveal">
+      <h3>The visit</h3>
+      <dl>
+        <dt>Where</dt>
+        <dd>Top of Landcross Drive<em>five minutes off Wellingborough Road, opposite the green.</em></dd>
+        <dt>Look for</dt>
+        <dd>The lit window<em>chip-shop white inside, hot air on the door.</em></dd>
+        <dt>Parking</dt>
+        <dd>On the street<em>quiet enough most evenings; busy after six on Fridays.</em></dd>
+        <dt>Walk in</dt>
+        <dd>Order at the counter<em>five-minute wait for fresh-fried; less for what's in the warmer.</em></dd>
+        <dt>Walk out</dt>
+        <dd>Hot parcel<em>home, table, news on, eat it before the chips lose the war with the wrap.</em></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="colophon">
+    <div>
+      <h4>The letterhead</h4>
+      <div class="letterhead">Abington<br/><i>Plaice</i></div>
+      <p>An independent fish &amp; chip shop on Landcross Drive, Abington Vale, Northampton. Frying for the postcode. Wrapped to take away. Phone, hours and any holiday changes published on <a href="https://www.facebook.com/ABINGTONPLAICE/" target="_blank" rel="noopener noreferrer">our Facebook</a> — the quickest place to check before you come down.</p>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <ul>
+        <li><b>The shop</b>43 Landcross Drive, Abington Vale, Northampton NN3 3LN</li>
+        <li><b>Nearest landmarks</b>Top of Landcross · off Wellingborough Road · five minutes from Weston Favell Centre</li>
+        <li><b>Food hygiene</b>Listed on the FSA register <a href="https://ratings.food.gov.uk/business/742253" target="_blank" rel="noopener noreferrer">— rating here</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>The order</h4>
+      <ul>
+        <li><b>How to order</b>Walk in, ask at the counter, pay on collection. No app, no minimum, no fuss.</li>
+        <li><b>Card &amp; cash</b>Both accepted at the till. Contactless for the under-fives.</li>
+        <li><b>Allergies</b>Tell the counter — we'll be straight about what's possible from a single-fryer kitchen.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="rule-strip">
+    <span>Set in Playfair Display &amp; Source Serif 4</span>
+    <span>The Abington Plaice · Northampton</span>
+    <span>Printed for the neighbourhood</span>
+  </div>
+</footer>
+
+</body>
+</html>
